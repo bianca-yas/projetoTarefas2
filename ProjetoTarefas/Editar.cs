@@ -49,7 +49,17 @@ namespace ProjetoTarefas
             int codigo = Convert.ToInt32(textBox2.Text);
             string titulo = textBox1.Text;
             string descricao = textBox3.Text;
-            string dataVencimento = maskedTextBox1.Text;
+            DateTime data;
+            string dataVencimento = "";
+            if(DateTime.TryParseExact(maskedTextBox1.Text, "dd/MM/yyyy", null, System.Globalization.DateTimeStyles.None, out data))
+            {
+                dataVencimento = data.ToString("yyyy-MM-dd");
+            }
+            else
+            {
+                MessageBox.Show("Data inválida");
+                return ;
+            }
             string prioridade = comboBox1.Text;
             string pendencia = comboBox2.Text;
 
@@ -106,14 +116,16 @@ namespace ProjetoTarefas
             else
             {
                 int codigo = Convert.ToInt32(textBox2.Text);
-
+                var dataFormatada = Convert.ToDateTime(edi.retornarData(codigo)).ToString("dd/MM/yyyy");
                 textBox1.Text = edi.retornarTitulo(codigo);
                 textBox3.Text = edi.retornarDescricao(codigo);
+                maskedTextBox1.Text = dataFormatada;
                 comboBox1.Text = edi.retornarPrioridade(codigo);
                 comboBox2.Text = edi.retornarPendencia(codigo);
 
                 textBox2.ReadOnly = true;
                 textBox1.ReadOnly = false;
+                maskedTextBox1.ReadOnly = false;
                 textBox3.ReadOnly = false;
             }
         }//fim do botao buscar

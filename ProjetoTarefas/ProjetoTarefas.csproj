@@ -104,6 +104,12 @@
     <Compile Include="Adicionar.Designer.cs">
       <DependentUpon>Adicionar.cs</DependentUpon>
     </Compile>
+    <Compile Include="Concluir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Concluir.Designer.cs">
+      <DependentUpon>Concluir.cs</DependentUpon>
+    </Compile>
     <Compile Include="Consultar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -133,6 +139,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Adicionar.resx">
       <DependentUpon>Adicionar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Concluir.resx">
+      <DependentUpon>Concluir.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Consultar.resx">
       <DependentUpon>Consultar.cs</DependentUpon>

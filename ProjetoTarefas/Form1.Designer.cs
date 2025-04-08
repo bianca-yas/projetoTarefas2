@@ -47,15 +47,15 @@
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(682, 71);
+            this.panel1.Size = new System.Drawing.Size(791, 71);
             this.panel1.TabIndex = 0;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.panel2.Location = new System.Drawing.Point(0, 415);
+            this.panel2.Location = new System.Drawing.Point(0, 432);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(682, 35);
+            this.panel2.Size = new System.Drawing.Size(791, 35);
             this.panel2.TabIndex = 1;
             // 
             // button1
@@ -69,7 +69,7 @@
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(103, 184);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(198, 65);
+            this.button1.Size = new System.Drawing.Size(220, 81);
             this.button1.TabIndex = 2;
             this.button1.Text = "1. Adicionar Tarefa";
             this.button1.UseVisualStyleBackColor = false;
@@ -83,9 +83,9 @@
             this.editarTarefa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.editarTarefa.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.editarTarefa.ForeColor = System.Drawing.Color.White;
-            this.editarTarefa.Location = new System.Drawing.Point(376, 184);
+            this.editarTarefa.Location = new System.Drawing.Point(395, 184);
             this.editarTarefa.Name = "editarTarefa";
-            this.editarTarefa.Size = new System.Drawing.Size(198, 65);
+            this.editarTarefa.Size = new System.Drawing.Size(220, 81);
             this.editarTarefa.TabIndex = 3;
             this.editarTarefa.Text = "2. Editar Tarefa";
             this.editarTarefa.UseVisualStyleBackColor = false;
@@ -99,9 +99,9 @@
             this.consultarTaf.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.consultarTaf.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.consultarTaf.ForeColor = System.Drawing.Color.White;
-            this.consultarTaf.Location = new System.Drawing.Point(103, 275);
+            this.consultarTaf.Location = new System.Drawing.Point(103, 300);
             this.consultarTaf.Name = "consultarTaf";
-            this.consultarTaf.Size = new System.Drawing.Size(198, 65);
+            this.consultarTaf.Size = new System.Drawing.Size(220, 81);
             this.consultarTaf.TabIndex = 4;
             this.consultarTaf.Text = "3. Consultar Tarefa";
             this.consultarTaf.UseVisualStyleBackColor = false;
@@ -115,9 +115,9 @@
             this.excluirTaf.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.excluirTaf.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.excluirTaf.ForeColor = System.Drawing.Color.White;
-            this.excluirTaf.Location = new System.Drawing.Point(376, 275);
+            this.excluirTaf.Location = new System.Drawing.Point(395, 300);
             this.excluirTaf.Name = "excluirTaf";
-            this.excluirTaf.Size = new System.Drawing.Size(198, 65);
+            this.excluirTaf.Size = new System.Drawing.Size(220, 81);
             this.excluirTaf.TabIndex = 5;
             this.excluirTaf.Text = "4. Excluir Tarefa";
             this.excluirTaf.UseVisualStyleBackColor = false;
@@ -139,7 +139,7 @@
             this.pictureBox1.BackgroundImage = global::ProjetoTarefas.Properties.Resources.logo_trabalho1;
             this.pictureBox1.Image = global::ProjetoTarefas.Properties.Resources.logo_trabalho_maior;
             this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(175, -91);
+            this.pictureBox1.Location = new System.Drawing.Point(254, -91);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(339, 245);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -152,7 +152,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(680, 450);
+            this.ClientSize = new System.Drawing.Size(790, 466);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.excluirTaf);
             this.Controls.Add(this.consultarTaf);

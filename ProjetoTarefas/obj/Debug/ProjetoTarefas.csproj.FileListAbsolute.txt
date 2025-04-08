@@ -46,3 +46,4 @@ C:\Users\bianca.ysassis\source\repos\ProjetoTarefas\ProjetoTarefas\bin\Debug\Sys
 C:\Users\bianca.ysassis\source\repos\ProjetoTarefas\ProjetoTarefas\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\bianca.ysassis\source\repos\ProjetoTarefas\ProjetoTarefas\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\bianca.ysassis\source\repos\ProjetoTarefas\ProjetoTarefas\obj\Debug\ProjetoTarefas.csproj.CopyComplete
+C:\Users\bianca.ysassis\source\repos\ProjetoTarefas\ProjetoTarefas\obj\Debug\ProjetoTarefas.Concluir.resources

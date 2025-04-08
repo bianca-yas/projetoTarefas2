@@ -55,7 +55,7 @@
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(682, 71);
+            this.panel1.Size = new System.Drawing.Size(791, 71);
             this.panel1.TabIndex = 1;
             // 
             // pictureBox1
@@ -64,7 +64,7 @@
             this.pictureBox1.BackgroundImage = global::ProjetoTarefas.Properties.Resources.logo_trabalho1;
             this.pictureBox1.Image = global::ProjetoTarefas.Properties.Resources.logo_trabalho_maior;
             this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(173, -90);
+            this.pictureBox1.Location = new System.Drawing.Point(231, -90);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(339, 245);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -74,9 +74,9 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.panel2.Location = new System.Drawing.Point(0, 415);
+            this.panel2.Location = new System.Drawing.Point(0, 431);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(682, 35);
+            this.panel2.Size = new System.Drawing.Size(791, 35);
             this.panel2.TabIndex = 2;
             // 
             // label1
@@ -231,7 +231,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(680, 450);
+            this.ClientSize = new System.Drawing.Size(790, 466);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.voltar);

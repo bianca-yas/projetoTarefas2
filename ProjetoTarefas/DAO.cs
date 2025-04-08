@@ -44,7 +44,7 @@ namespace ProjetoTarefas
 
         public void PreencherVetor()
         {
-            string query = "select * from pessoa";
+            string query = "select * from tarefas";
 
             //Instanciar os vetores
             this.codigo = new int[100];
@@ -65,9 +65,29 @@ namespace ProjetoTarefas
                 codigo[i] = Convert.ToInt32(reader["codigo"]);
                 titulo[i] = reader["titulo"]+"";
                 descricao[i] = reader["descricao"] + "";
-                dataVencimento[i] = reader["dataPendencia"] + "";
+
+
+                string dataLida = reader["dataPendencia"].ToString();
+                if (!string.IsNullOrWhiteSpace(dataLida) && dataLida != "0000-00-00")
+                {
+                    DateTime data;
+                    if (DateTime.TryParse(reader["dataPendencia"].ToString(), out data))
+                    {
+                        dataVencimento[i] = data.ToString("dd/MM/yyyy");
+                    }
+                    else
+                    {
+                        dataVencimento[i] = "";
+                    }
+                }
+                else
+                {
+                    dataVencimento[i] = "";
+                }
+
+                
                 prioridade[i] = reader["prioridade"] + "";
-                pendencia[i] = reader["pendencia"]+"";
+                pendencia[i] = reader["pendencia"] + "";
 
                 i++; //contador gira
                 contador++; //dados que vão preencher o vetor
@@ -81,14 +101,13 @@ namespace ProjetoTarefas
             PreencherVetor(); //Preenchendo o vetor com dados do banco
 
             i = 0;
-            while(i < quantidadeDeDados())
+            for(int i  = 0; i < codigo.Length; i++)
             {
                 if (codigo[i] == cod)
                 {
                     return i;
                 }
-                i++; //faz o contador girar
-            }//fim do while
+            }
 
             return -1; //Encerrar leitura
 
@@ -122,7 +141,7 @@ namespace ProjetoTarefas
             {
                 return dataVencimento[posicao];
             }
-            return "Código digitado não é válido!";
+            return "";
         }//fim do retornar data
 
         public string retornarPrioridade(int cod)
@@ -147,7 +166,7 @@ namespace ProjetoTarefas
 
         public int quantidadeDeDados()
         {
-            return contador++;
+            return contador;
         }//fim do quantidadeDeDados
 
         public string Editar(int codigo, string campo, string dado)
@@ -158,6 +177,15 @@ namespace ProjetoTarefas
 
             return resultado;
         }//fim do atualizar
+
+        public string Concluir(int codigo)
+        {
+            string query = $"update tarefas set pendencia = 'Concluída' where codigo = '{codigo}'";
+            MySqlCommand sql = new MySqlCommand(query, conn);
+            string resultado = sql.ExecuteNonQuery() + "  Tarefa concluída com sucesso!";
+
+            return resultado;
+        }
 
 
     }
