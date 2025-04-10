@@ -8,21 +8,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace ProjetoTarefas
 {
-    public partial class Excluir : Form
+    public partial class Filtrar : Form
     {
-        DAO exclu;
-        public Excluir()
-        {
-            this.Load += new EventHandler(Excluir_Load);
-            exclu = new DAO();
+        public Filtrar()
+        { 
             InitializeComponent();
         }
 
-        private void ArredondarBotao(System.Windows.Forms.Button botao, int raio)
+        private void ArredondarBotao(Button botao, int raio)
         {
             GraphicsPath path = new GraphicsPath();
             path.AddArc(0, 0, raio, raio, 180, 90);
@@ -33,11 +29,20 @@ namespace ProjetoTarefas
             botao.Region = new Region(path);
         } // Fim
 
-
-        private void Excluir_Load(object sender, EventArgs e)
+        private void Filtrar_Load(object sender, EventArgs e)
         {
+            ArredondarBotao(busca, 30);
             ArredondarBotao(voltar, 30);
-            ArredondarBotao(exclude, 30);
+        }
+
+        private void busca_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
 
         private void voltar_Click(object sender, EventArgs e)
@@ -45,16 +50,14 @@ namespace ProjetoTarefas
             this.Close();
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void exclude_Click(object sender, EventArgs e)
+        private void comboBoxPrioridade_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int codigo = Convert.ToInt32(textBox2.Text);
-            MessageBox.Show(exclu.Excluir(codigo));
-            this.Close();
+
         }
     }
 }

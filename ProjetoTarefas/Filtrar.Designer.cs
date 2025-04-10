@@ -1,6 +1,6 @@
 ﻿namespace ProjetoTarefas
 {
-    partial class Excluir
+    partial class Filtrar
     {
         /// <summary>
         /// Required designer variable.
@@ -28,17 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Excluir));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Filtrar));
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.exclude = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.voltar = new System.Windows.Forms.Button();
+            this.busca = new System.Windows.Forms.Button();
+            this.comboBoxPrioridade = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -48,7 +50,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(792, 71);
-            this.panel1.TabIndex = 2;
+            this.panel1.TabIndex = 3;
             // 
             // pictureBox1
             // 
@@ -66,54 +68,40 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.panel2.Location = new System.Drawing.Point(0, 433);
+            this.panel2.Location = new System.Drawing.Point(0, 431);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(792, 35);
-            this.panel2.TabIndex = 3;
+            this.panel2.TabIndex = 4;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(54, 224);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(209, 18);
+            this.label5.TabIndex = 17;
+            this.label5.Text = "Prioridade (Baixa, Média, Alta):";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(53, 104);
+            this.label1.Location = new System.Drawing.Point(48, 104);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(361, 50);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "EXCLUIR TAREFAS";
+            this.label1.Size = new System.Drawing.Size(436, 50);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "CONSULTAR TAREFAS";
             // 
-            // label3
+            // dataGridView1
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(59, 180);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 18);
-            this.label3.TabIndex = 21;
-            this.label3.Text = "Código:";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(62, 199);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(233, 40);
-            this.textBox2.TabIndex = 20;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
-            // 
-            // exclude
-            // 
-            this.exclude.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.exclude.FlatAppearance.BorderSize = 0;
-            this.exclude.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.exclude.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.exclude.ForeColor = System.Drawing.Color.White;
-            this.exclude.Location = new System.Drawing.Point(62, 337);
-            this.exclude.Name = "exclude";
-            this.exclude.Size = new System.Drawing.Size(132, 40);
-            this.exclude.TabIndex = 25;
-            this.exclude.Text = "EXCLUIR";
-            this.exclude.UseVisualStyleBackColor = false;
-            this.exclude.Click += new System.EventHandler(this.exclude_Click);
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(299, 162);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(460, 232);
+            this.dataGridView1.TabIndex = 19;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // voltar
             // 
@@ -121,31 +109,62 @@
             this.voltar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.voltar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.voltar.ForeColor = System.Drawing.Color.White;
-            this.voltar.Location = new System.Drawing.Point(222, 337);
+            this.voltar.Location = new System.Drawing.Point(57, 354);
             this.voltar.Name = "voltar";
             this.voltar.Size = new System.Drawing.Size(111, 40);
-            this.voltar.TabIndex = 26;
+            this.voltar.TabIndex = 20;
             this.voltar.Text = "VOLTAR";
             this.voltar.UseVisualStyleBackColor = false;
+            this.voltar.Click += new System.EventHandler(this.voltar_Click);
             // 
-            // Excluir
+            // busca
+            // 
+            this.busca.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.busca.FlatAppearance.BorderSize = 0;
+            this.busca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.busca.Location = new System.Drawing.Point(57, 288);
+            this.busca.Name = "busca";
+            this.busca.Size = new System.Drawing.Size(58, 23);
+            this.busca.TabIndex = 27;
+            this.busca.Text = "Filtrar";
+            this.busca.UseVisualStyleBackColor = false;
+            this.busca.Click += new System.EventHandler(this.busca_Click);
+            // 
+            // comboBoxPrioridade
+            // 
+            this.comboBoxPrioridade.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxPrioridade.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxPrioridade.FormattingEnabled = true;
+            this.comboBoxPrioridade.Items.AddRange(new object[] {
+            "Baixa",
+            "Média",
+            "Alta"});
+            this.comboBoxPrioridade.Location = new System.Drawing.Point(57, 243);
+            this.comboBoxPrioridade.Name = "comboBoxPrioridade";
+            this.comboBoxPrioridade.Size = new System.Drawing.Size(187, 39);
+            this.comboBoxPrioridade.TabIndex = 28;
+            this.comboBoxPrioridade.SelectedIndexChanged += new System.EventHandler(this.comboBoxPrioridade_SelectedIndexChanged);
+            // 
+            // Filtrar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(790, 466);
+            this.Controls.Add(this.comboBoxPrioridade);
+            this.Controls.Add(this.busca);
             this.Controls.Add(this.voltar);
-            this.Controls.Add(this.exclude);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Name = "Excluir";
-            this.Text = "Excluir";
-            this.Load += new System.EventHandler(this.Excluir_Load);
+            this.Name = "Filtrar";
+            this.Text = "Filtrar";
+            this.Load += new System.EventHandler(this.Filtrar_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -156,10 +175,11 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button exclude;
+        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button voltar;
+        private System.Windows.Forms.Button busca;
+        private System.Windows.Forms.ComboBox comboBoxPrioridade;
     }
 }

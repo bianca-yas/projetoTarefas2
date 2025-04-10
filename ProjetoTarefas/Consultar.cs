@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -24,6 +25,13 @@ namespace ProjetoTarefas
             adicionarDados();
         }
 
+        public void Limpar()
+        {
+           dataGridView1.Rows.Clear();
+           dataGridView1.Refresh();
+            
+        }//fim do método
+
         private void ArredondarBotao(Button botao, int raio)
         {
             GraphicsPath path = new GraphicsPath();
@@ -39,7 +47,10 @@ namespace ProjetoTarefas
         {
             ArredondarBotao(voltar, 30);
             ArredondarBotao(marcar, 30);
+            ArredondarBotao(filt, 20);
+            ArredondarBotao(filt2, 20);
         }
+
 
         public void nomeColunas()
         {
@@ -80,8 +91,8 @@ namespace ProjetoTarefas
 
                     if(diferenca.TotalDays <= 7 && diferenca.TotalDays >= 0)
                     {
-                        e.CellStyle.BackColor = Color.Red;
-                        e.CellStyle.ForeColor = Color.White;
+                        e.CellStyle.BackColor = Color.Yellow;
+                        e.CellStyle.ForeColor = Color.Black;
                     }
                     else if(diferenca.TotalDays < 0)
                     {
@@ -90,7 +101,7 @@ namespace ProjetoTarefas
                     }
                 }
             }
-        }
+        }//fim do cellformating
 
 
         private void voltar_Click(object sender, EventArgs e)
@@ -108,5 +119,62 @@ namespace ProjetoTarefas
         {
 
         }//fim do dataGridView
+
+
+        private void filt_Click(object sender, EventArgs e)
+        {
+            string prioridade = comboBoxP.Text;
+            if(comboBoxP.Text == "")
+            {
+                comboBoxP.Text = "Informe a prioridade!";
+            }
+            else
+            {
+                Limpar();
+                consult.PreencherVetor();
+                for(int i = 0; i < consult.quantidadeDeDados(); i++)
+                {
+                    if(comboBoxP.Text == consult.prioridade[i])
+                    {
+                        consult.Filtrar(prioridade);
+                        dataGridView1.Rows.Add(consult.codigo[i], consult.titulo[i], consult.descricao[i], consult.dataVencimento[i], consult.prioridade[i], consult.pendencia[i]);
+                    }
+
+                }
+            }
+        }
+
+        private void filt2_Click(object sender, EventArgs e)
+        {
+            string pendencia = comboBoxStatus.Text;
+            if (comboBoxStatus.Text == "")
+            {
+                comboBoxStatus.Text = "Informe o status que deseja filtrar!";
+            }
+            else
+            {
+                Limpar();
+                consult.PreencherVetor();
+                for (int i = 0; i < consult.quantidadeDeDados(); i++)
+                {
+                    if (comboBoxStatus.Text == consult.pendencia[i])
+                    {
+                        consult.FiltrarStatus(pendencia);
+                        dataGridView1.Rows.Add(consult.codigo[i], consult.titulo[i], consult.descricao[i], consult.dataVencimento[i], consult.prioridade[i], consult.pendencia[i]);
+                    }
+
+                }
+            }
+        }
+
+        private void comboBoxP_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBoxStatus_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

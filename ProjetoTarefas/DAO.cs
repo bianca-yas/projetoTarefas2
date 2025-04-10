@@ -187,6 +187,33 @@ namespace ProjetoTarefas
             return resultado;
         }
 
+        public string Filtrar(string prioridade)
+        {
+            string query = $"select * from tarefas where prioridade = '{prioridade}'";
+            MySqlCommand sql = new MySqlCommand(query, conn);
+            string resultado = sql.ExecuteNonQuery() + "";
+
+            return resultado;
+        }
+
+        public string FiltrarStatus(string pendencia)
+        {
+            string query = $"select * from tarefas where pendencia = '{pendencia}'";
+            MySqlCommand sql = new MySqlCommand(query, conn);
+            string resultado = sql.ExecuteNonQuery() + "";
+
+            return resultado;
+        }
+
+        public string Excluir(int codigo)
+        {
+            string query = $"delete from tarefas where codigo = '{codigo}'";
+            MySqlCommand sql = new MySqlCommand(query, conn);
+            string resultado = sql.ExecuteNonQuery() + "  Deletado com sucesso!";
+
+            return resultado;
+
+        }
 
     }
 }
