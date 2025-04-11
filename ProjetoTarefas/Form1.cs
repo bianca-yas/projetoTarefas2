@@ -70,5 +70,10 @@ namespace ProjetoTarefas
             Excluir exc = new Excluir();
             exc.ShowDialog();
         }
+
+        private void mensagem_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

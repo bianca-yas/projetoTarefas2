@@ -36,13 +36,8 @@ namespace ProjetoTarefas
 
         private void Excluir_Load(object sender, EventArgs e)
         {
-            ArredondarBotao(voltar, 30);
+            ArredondarBotao(voltar2, 30);
             ArredondarBotao(exclude, 30);
-        }
-
-        private void voltar_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -54,6 +49,11 @@ namespace ProjetoTarefas
         {
             int codigo = Convert.ToInt32(textBox2.Text);
             MessageBox.Show(exclu.Excluir(codigo));
+            this.Close();
+        }
+
+        private void voltar2_Click(object sender, EventArgs e)
+        {
             this.Close();
         }
     }

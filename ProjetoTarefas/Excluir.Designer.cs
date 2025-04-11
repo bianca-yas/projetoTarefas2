@@ -28,16 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Excluir));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.exclude = new System.Windows.Forms.Button();
-            this.voltar = new System.Windows.Forms.Button();
+            this.voltar2 = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,21 +48,8 @@
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(792, 71);
+            this.panel1.Size = new System.Drawing.Size(792, 79);
             this.panel1.TabIndex = 2;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.pictureBox1.BackgroundImage = global::ProjetoTarefas.Properties.Resources.logo_trabalho1;
-            this.pictureBox1.Image = global::ProjetoTarefas.Properties.Resources.logo_trabalho_maior;
-            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(222, -91);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(339, 245);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // panel2
             // 
@@ -115,18 +103,40 @@
             this.exclude.UseVisualStyleBackColor = false;
             this.exclude.Click += new System.EventHandler(this.exclude_Click);
             // 
-            // voltar
+            // voltar2
             // 
-            this.voltar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.voltar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.voltar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.voltar.ForeColor = System.Drawing.Color.White;
-            this.voltar.Location = new System.Drawing.Point(222, 337);
-            this.voltar.Name = "voltar";
-            this.voltar.Size = new System.Drawing.Size(111, 40);
-            this.voltar.TabIndex = 26;
-            this.voltar.Text = "VOLTAR";
-            this.voltar.UseVisualStyleBackColor = false;
+            this.voltar2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.voltar2.FlatAppearance.BorderSize = 0;
+            this.voltar2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.voltar2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.voltar2.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.voltar2.Location = new System.Drawing.Point(222, 337);
+            this.voltar2.Name = "voltar2";
+            this.voltar2.Size = new System.Drawing.Size(111, 40);
+            this.voltar2.TabIndex = 28;
+            this.voltar2.Text = "VOLTAR";
+            this.voltar2.UseVisualStyleBackColor = false;
+            this.voltar2.Click += new System.EventHandler(this.voltar2_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::ProjetoTarefas.Properties.Resources.lixo;
+            this.pictureBox2.Location = new System.Drawing.Point(403, 87);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(87, 82);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 27;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ProjetoTarefas.Properties.Resources.logo_trabalho_maior;
+            this.pictureBox1.Location = new System.Drawing.Point(235, -124);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(323, 318);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // Excluir
             // 
@@ -134,17 +144,21 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(790, 466);
-            this.Controls.Add(this.voltar);
+            this.Controls.Add(this.voltar2);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.exclude);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MinimizeBox = false;
             this.Name = "Excluir";
             this.Text = "Excluir";
             this.Load += new System.EventHandler(this.Excluir_Load);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -154,12 +168,13 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button exclude;
-        private System.Windows.Forms.Button voltar;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button voltar2;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

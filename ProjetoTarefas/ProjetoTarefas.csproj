@@ -104,6 +104,12 @@
     <Compile Include="Adicionar.Designer.cs">
       <DependentUpon>Adicionar.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ajudar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ajudar.Designer.cs">
+      <DependentUpon>Ajudar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Concluir.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +151,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Adicionar.resx">
       <DependentUpon>Adicionar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ajudar.resx">
+      <DependentUpon>Ajudar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Concluir.resx">
       <DependentUpon>Concluir.cs</DependentUpon>
@@ -196,6 +205,51 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\logo trabalho maior.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\estrela.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lapis.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lapis1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lixo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\check.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mais.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\consult.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-plus.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-plus-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-pencil-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-trash-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-check-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-tasks-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-question-30.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

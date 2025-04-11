@@ -49,6 +49,7 @@ namespace ProjetoTarefas
             ArredondarBotao(marcar, 30);
             ArredondarBotao(filt, 20);
             ArredondarBotao(filt2, 20);
+            ArredondarBotao(ajuda, 35);
         }
 
 
@@ -101,7 +102,16 @@ namespace ProjetoTarefas
                     }
                 }
             }
+
+            if (dataGridView1.Columns[e.ColumnIndex].Name == "Status")
+            {
+                if(e.Value != null && e.Value.ToString().Trim().Equals("Concluída", StringComparison.OrdinalIgnoreCase))
+                {
+                    e.CellStyle.BackColor = Color.LightGreen;
+                } 
+            }
         }//fim do cellformating
+
 
 
         private void voltar_Click(object sender, EventArgs e)
@@ -175,6 +185,12 @@ namespace ProjetoTarefas
         private void comboBoxStatus_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void ajuda_Click(object sender, EventArgs e)
+        {
+            Ajudar ajudar = new Ajudar();
+            ajudar.ShowDialog();
         }
     }
 }
