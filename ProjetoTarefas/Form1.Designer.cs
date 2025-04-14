@@ -82,14 +82,14 @@
             this.mensagem.ReadOnly = true;
             this.mensagem.Size = new System.Drawing.Size(274, 213);
             this.mensagem.TabIndex = 8;
-            this.mensagem.Text = "Utilize a OrdoFlow para o gerenciamento de suas tarefas com mais facilidade e rap" +
-    "idez!";
+            this.mensagem.Text = "Seja bem-vindo à OrdoFlow, utilize nossa plataforma para o gerenciamento de suas " +
+    "tarefas com mais facilidade e rapidez!";
             this.mensagem.TextChanged += new System.EventHandler(this.mensagem_TextChanged);
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::ProjetoTarefas.Properties.Resources.book;
-            this.pictureBox2.Location = new System.Drawing.Point(137, 222);
+            this.pictureBox2.Location = new System.Drawing.Point(130, 236);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(150, 137);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

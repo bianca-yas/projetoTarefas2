@@ -192,5 +192,43 @@ namespace ProjetoTarefas
             Ajudar ajudar = new Ajudar();
             ajudar.ShowDialog();
         }
+
+        private void textBoxBusca_TextChanged(object sender, EventArgs e)
+        {
+            string termoBusca = textBoxBusca.Text.Trim().ToLower();
+
+            Limpar();
+            consult.PreencherVetor();
+
+            for (int i = 0; i < consult.quantidadeDeDados(); i++)
+            {
+                string titulo = consult.titulo[i].ToLower();
+                string descricao = consult.descricao[i].ToLower();
+
+                if (titulo.Contains(termoBusca) || descricao.Contains(termoBusca))
+                {
+                    dataGridView1.Rows.Add(consult.codigo[i], consult.titulo[i], consult.descricao[i], consult.dataVencimento[i], consult.prioridade[i], consult.pendencia[i]);
+                }
+            }
+        }
+
+        private void busca1_Click(object sender, EventArgs e)
+        {
+            string termoBusca = textBoxBusca.Text.Trim().ToLower();
+
+            Limpar();
+            consult.PreencherVetor();
+
+            for (int i = 0; i < consult.quantidadeDeDados(); i++)
+            {
+                string titulo = consult.titulo[i].ToLower();
+                string descricao = consult.descricao[i].ToLower();
+
+                if (titulo.Contains(termoBusca) || descricao.Contains(termoBusca))
+                {
+                    dataGridView1.Rows.Add(consult.codigo[i], consult.titulo[i], consult.descricao[i], consult.dataVencimento[i], consult.prioridade[i], consult.pendencia[i]);
+                }
+            }
+        }
     }
 }

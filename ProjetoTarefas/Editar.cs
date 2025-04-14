@@ -59,7 +59,7 @@ namespace ProjetoTarefas
             {
                 MessageBox.Show("Data inválida");
                 return ;
-            }
+            }//convertendo o datetime para string
             string prioridade = comboBox1.Text;
             string pendencia = comboBox2.Text;
 

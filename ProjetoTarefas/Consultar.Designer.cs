@@ -38,6 +38,8 @@
             this.filt2 = new System.Windows.Forms.Button();
             this.comboBoxP = new System.Windows.Forms.ComboBox();
             this.comboBoxStatus = new System.Windows.Forms.ComboBox();
+            this.textBoxBusca = new System.Windows.Forms.TextBox();
+            this.busca1 = new System.Windows.Forms.Button();
             this.ajuda = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -79,7 +81,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(72, 157);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(643, 188);
+            this.dataGridView1.Size = new System.Drawing.Size(549, 188);
             this.dataGridView1.TabIndex = 8;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridView1_CellFormatting);
@@ -120,7 +122,7 @@
             this.filt.FlatAppearance.BorderSize = 0;
             this.filt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.filt.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.filt.Location = new System.Drawing.Point(619, 351);
+            this.filt.Location = new System.Drawing.Point(682, 157);
             this.filt.Name = "filt";
             this.filt.Size = new System.Drawing.Size(96, 23);
             this.filt.TabIndex = 28;
@@ -134,7 +136,7 @@
             this.filt2.FlatAppearance.BorderSize = 0;
             this.filt2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.filt2.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.filt2.Location = new System.Drawing.Point(619, 380);
+            this.filt2.Location = new System.Drawing.Point(682, 186);
             this.filt2.Name = "filt2";
             this.filt2.Size = new System.Drawing.Size(96, 23);
             this.filt2.TabIndex = 29;
@@ -151,7 +153,7 @@
             "Baixa",
             "Média",
             "Alta"});
-            this.comboBoxP.Location = new System.Drawing.Point(564, 351);
+            this.comboBoxP.Location = new System.Drawing.Point(627, 157);
             this.comboBoxP.Name = "comboBoxP";
             this.comboBoxP.Size = new System.Drawing.Size(49, 24);
             this.comboBoxP.TabIndex = 30;
@@ -165,11 +167,33 @@
             this.comboBoxStatus.Items.AddRange(new object[] {
             "Concluída",
             "Pendente"});
-            this.comboBoxStatus.Location = new System.Drawing.Point(564, 380);
+            this.comboBoxStatus.Location = new System.Drawing.Point(627, 186);
             this.comboBoxStatus.Name = "comboBoxStatus";
             this.comboBoxStatus.Size = new System.Drawing.Size(49, 24);
             this.comboBoxStatus.TabIndex = 31;
             this.comboBoxStatus.SelectedIndexChanged += new System.EventHandler(this.comboBoxStatus_SelectedIndexChanged);
+            // 
+            // textBoxBusca
+            // 
+            this.textBoxBusca.Location = new System.Drawing.Point(668, 216);
+            this.textBoxBusca.Multiline = true;
+            this.textBoxBusca.Name = "textBoxBusca";
+            this.textBoxBusca.Size = new System.Drawing.Size(55, 35);
+            this.textBoxBusca.TabIndex = 34;
+            this.textBoxBusca.TextChanged += new System.EventHandler(this.textBoxBusca_TextChanged);
+            // 
+            // busca1
+            // 
+            this.busca1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.busca1.FlatAppearance.BorderSize = 0;
+            this.busca1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.busca1.Image = global::ProjetoTarefas.Properties.Resources.icons8_search_30;
+            this.busca1.Location = new System.Drawing.Point(627, 216);
+            this.busca1.Name = "busca1";
+            this.busca1.Size = new System.Drawing.Size(35, 35);
+            this.busca1.TabIndex = 35;
+            this.busca1.UseVisualStyleBackColor = false;
+            this.busca1.Click += new System.EventHandler(this.busca1_Click);
             // 
             // ajuda
             // 
@@ -177,7 +201,7 @@
             this.ajuda.FlatAppearance.BorderSize = 0;
             this.ajuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ajuda.Image = global::ProjetoTarefas.Properties.Resources.icons8_question_30;
-            this.ajuda.Location = new System.Drawing.Point(676, 104);
+            this.ajuda.Location = new System.Drawing.Point(582, 351);
             this.ajuda.Name = "ajuda";
             this.ajuda.Size = new System.Drawing.Size(39, 36);
             this.ajuda.TabIndex = 33;
@@ -210,6 +234,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(790, 466);
+            this.Controls.Add(this.busca1);
+            this.Controls.Add(this.textBoxBusca);
             this.Controls.Add(this.ajuda);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.comboBoxStatus);
@@ -251,5 +277,7 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button ajuda;
+        private System.Windows.Forms.TextBox textBoxBusca;
+        private System.Windows.Forms.Button busca1;
     }
 }
